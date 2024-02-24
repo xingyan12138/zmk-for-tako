@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define NAV_L 1
@@ -78,46 +77,46 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W       &kp E        &kp R            &kp T          &kp Y          &kp U            &kp I        &kp O       &kp P
-&hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F      &kp G          &kp H          &hm RSHFT J      &hm RCTRL K  &hm LALT L  &hm LGUI SEMI
-&kp Z       &kp X       &kp C        &kp V            &kp B          &kp N          &kp M            &kp COMMA    &kp DOT     &kp FSLH
-                                     &lt NAV_L SPACE  &lt 2 ENTER    &lt NUM_L TAB  &lt 2 BACKSPACE
+&hm ESCAPE Q  &kp W  &kp E  &kp R                 &kp T          &kp Y        &kp U       &kp I  &kp O          &kp P
+&hm LCTRL A   &kp S  &kp D  &kp F                 &kp G          &kp H        &kp J       &kp K  &kp L          &kp SEMICOLON
+&kp Z         &kp X  &kp C  &kp V                 &kp B          &kp B        &kp N       &kp M  &hm DOT COMMA  &kp SLASH
+                            &hm LEFT_SHIFT ENTER  &lt 1 SPACE    &lt 2 SPACE  &kp DELETE
             >;
         };
 
         nav_layer {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp N5     &kp NUMBER_6  &kp N7     &kp N8     &kp N9     &kp N0
-&kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp F12    &kp MINUS     &kp EQUAL  &kp GRAVE  &kp LC(L)  &kp SQT
-&trans        &trans        &trans        &trans          &trans     &trans        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
-                                          &trans          &trans     &mo 4         &kp RSHFT
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5    &kp NUMBER_6      &kp N7     &kp N8   &kp N9      &kp N0
+&kp DEL       &trans        &kp UP_ARROW    &trans        &trans    &trans            &trans     &kp SQT  &kp MINUS   &kp EQUAL
+&trans        &kp LEFT      &kp DOWN_ARROW  &kp RIGHT     &trans    &trans            &trans     &trans   &kp PERIOD  &trans
+                                            &trans        &trans    &kp K_PLAY_PAUSE  &kp ENTER
             >;
         };
 
         other_layer {
             bindings = <
-&kp ESC   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0    &trans  &trans    &kp UP_ARROW    &trans     &trans
-&kp CAPS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp AT_SIGN        &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans
-&kp DEL   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT            &trans  &trans    &trans          &trans     &trans
-                                            &trans           &trans             &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7      &kp F8        &kp F9      &kp F10
+&trans  &trans  &trans  &trans  &trans    &trans  &trans      &kp C_VOL_UP  &kp F11     &kp F12
+&trans  &trans  &trans  &trans  &trans    &trans  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
 
-        num_layer {
+        layer_3 {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4          &kp F5          &kp F6  &kp F7  &kp F8  &kp F9   &kp F10
-&kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &trans          &trans  &trans  &trans  &kp F11  &kp F12
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &trans  &trans  &trans  &trans   &trans
-                                          &trans          &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
 
-        sym_layer {
+        layer_4 {
             bindings = <
-&kp LBRC   &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp RBRC        &trans  &trans  &trans  &trans  &trans
-&kp COLON  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp PLUS        &trans  &trans  &trans  &trans  &trans
-&kp TILDE  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(BSLH)    &trans  &trans  &trans  &trans  &trans
-                                   &kp LS(N0)  &kp UNDER       &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
