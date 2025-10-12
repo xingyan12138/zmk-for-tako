@@ -28,49 +28,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        left_bkt {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <2 3>;
-        };
-
-        right_bkt {
-            bindings = <&kp RBKT>;
-            key-positions = <7 6>;
-        };
-
-        left_par {
-            bindings = <&kp LPAR>;
-            key-positions = <13 12>;
-        };
-
-        right_par {
-            bindings = <&kp RPAR>;
-            key-positions = <16 17>;
-        };
-
-        left_brc {
-            bindings = <&kp LBRC>;
-            key-positions = <22 23>;
-        };
-
-        right_brc {
-            bindings = <&kp RBRC>;
-            key-positions = <26 27>;
-        };
-
-        blsh {
-            bindings = <&kp BSLH>;
-            key-positions = <4 5>;
-        };
-
-        pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <14 15>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
